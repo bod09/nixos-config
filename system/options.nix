@@ -1,12 +1,8 @@
 # /etc/nixos/system/options.nix
 
-{ config, pkgs, modulesPath, ... }:
+{ config, pkgs, ... }:
 
 {
-  imports =
-    [ (modulesPath + "installer/scan/not-detected.nix")
-    ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -61,6 +57,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  hardware.enableRedistributableFirmware = lib.mkDefault true;
 
   # Hyprland
   programs.hyprland = {
