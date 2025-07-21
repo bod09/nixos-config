@@ -1,8 +1,12 @@
 # /etc/nixos/system/options.nix
 
-{ config, pkgs, ... }:
+{ config, pkgs, modulesPath, ... }:
 
 {
+  imports =
+    [ (modulesPath + "installer/scan/not-detected.nix")
+    ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
