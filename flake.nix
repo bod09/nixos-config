@@ -1,0 +1,49 @@
+{
+  description = "Nixos config flake";
+
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+ #   catppuccin.url = "github:catppuccin/nix";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+ #   stylix = {
+ #     url = "github:danth/stylix";
+ #     inputs.nixpkgs.follows = "nixpkgs";
+ #   };
+  };
+
+  outputs = { self, nixpkgs, ... }@inputs: {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+
+      # Pass arguments to NixOs anid home-manager modules
+      specialArgs = {
+        inherit inputs; # Makes inputs (like home-manager) available to modules
+      };
+
+      modules = [
+        ./system/configuration.nix # <-- Main entry point
+ #       inputs.catppuccin.nixosModules.catppuccin
+ #       inputs.stylix.nixosModules.stylix
+        inputs.home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          # Passes Special Args down to home-manager modules
+          home-manager.extraSpecialArgs = { theme = ./theme; };
+
+          # home.nix file used for user "bod"
+          home-manager.users.bod = {
+            imports = [
+              ./home/home.nix
+ #             inputs.catppuccin.homeModules.catppuccin
+            ];
+          };
+        }
+      ];
+    };
+  };
+}
