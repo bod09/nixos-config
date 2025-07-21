@@ -57,7 +57,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  hardware.enableRedistributableFirmware = lib.mkDefault true;
 
   # Hyprland
   programs.hyprland = {
