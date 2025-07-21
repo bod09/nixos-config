@@ -4,6 +4,8 @@
 { config, lib, pkgs, ... }:
 
 {
+  hardware.enableRedistributableFirmware = lib.mkDefault true;
+
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
