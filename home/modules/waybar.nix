@@ -52,6 +52,10 @@
           format = " {short} {variant}";
           on-click = "";
         };
+        "battery" = {
+          format = "{icon} {capacity}%";
+          format-icons = ["" "" "" "" ""];
+        };
         "clock" = {
           format = " {:%H:%M}";
           tooltip-format = "{:%b-%d}";
