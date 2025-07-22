@@ -8,6 +8,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
  #   stylix = {
  #     url = "github:danth/stylix";
  #     inputs.nixpkgs.follows = "nixpkgs";
@@ -27,6 +28,7 @@
         ./system/configuration.nix # <-- Main entry point
  #       inputs.catppuccin.nixosModules.catppuccin
  #       inputs.stylix.nixosModules.stylix
+        inputs.spicetify-nix.nixosModules.spicetify
         inputs.home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

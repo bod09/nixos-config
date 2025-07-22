@@ -90,6 +90,11 @@
     jack.enable = true;
   };
 
+ # Spicetify
+  programs.spicetify = {
+    enable = true;
+  };
+
   # Storage optimization
    nix.settings.auto-optimise-store = true;
    nix.gc = {

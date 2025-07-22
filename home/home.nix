@@ -19,8 +19,6 @@
     nerd-fonts.jetbrains-mono
     nwg-look
     swaynotificationcenter
-    spotify
-    spicetify-cli
     vesktop
     protonplus
     vscodium
