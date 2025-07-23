@@ -26,6 +26,9 @@
   ];
 
   # Programs
+  programs.waybar = {
+    enable = true;
+  };
   programs.kitty.enable = true;
   programs.rofi = {
     enable = true;
@@ -48,6 +51,15 @@
       "--disable-features=NativeBraveWallet"
       "--disable-features=BraveAiChat"
     ];
+  };
+
+  #catppuccin
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    # waybar.enable = true;
+    # rofi.enable = true;
+    # kitty.enable = true;
   };
 
   # Hyprland fixing theme issues
