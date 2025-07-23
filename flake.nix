@@ -8,7 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
  #   stylix = {
  #     url = "github:danth/stylix";
  #     inputs.nixpkgs.follows = "nixpkgs";
@@ -19,7 +22,7 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
-      # Pass arguments to NixOs anid home-manager modules
+      # Pass arguments to NixOS and home-manager modules
       specialArgs = {
         inherit inputs; # Makes inputs (like home-manager) available to modules
       };

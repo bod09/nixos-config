@@ -1,7 +1,10 @@
 # /etc/nixos/system/options.nix
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
+let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+in
 {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -90,9 +93,19 @@
     jack.enable = true;
   };
 
- # Spicetify
+  # Spotify
   programs.spicetify = {
     enable = true;
+    enabledExtensions = with spicePkgs.extensions; [
+      adblockify
+      listPlaylistsWithSong
+      sectionMarker
+    ];
+    enabledCustomApps = with spicePkgs.apps; [
+      marketplace
+    ];
+    theme = spicePkgs.themes.catppuccin;
+    colorScheme = "mocha";
   };
 
   # Storage optimization

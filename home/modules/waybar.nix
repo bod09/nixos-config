@@ -13,7 +13,7 @@
         margin-bottom = 0;
         modules-left = ["custom/startmenu" "hyprland/workspaces" "tray"];
         modules-center = ["hyprland/window"];
-        modules-right = ["wireplumber" "hyprland/language" "battery" "clock" "custom/notification"];
+        modules-right = ["wireplumber" "hyprland/language" "battery" "network" "clock" "custom/notification"];
 
         "custom/startmenu" = {
           format = "{icon}";
@@ -38,7 +38,7 @@
           };
         };
         "hyprland/window" = {
-          format = "{}";
+          format = "{class}";
           separate-outputs = true;
         };
         "wireplumber" = {
@@ -55,6 +55,18 @@
         "battery" = {
           format = "{icon} {capacity}%";
           format-icons = ["" "" "" "" ""];
+        };
+        "network" = {
+          format = "{ifname}";
+          format-wifi = " {essid}";
+          format-ethernet = "󰈀 {ipaddr}/{cidr}";
+          format-disconnected = "󰤮 Disconnected";
+          tooltip-format = "󰊗 {ifname} via {gwaddr}";
+          tooltip-format-wifi = " {essid} ({signalStrength}%)";
+          tooltip-format-ethernet = "󰈀 {ifname}";
+          tooltip-format-disconnected = "󰤮 Disconnected";
+          max-length = 50;
+          on-click = "kitty -e nmtui";
         };
         "clock" = {
           format = " {:%H:%M}";
@@ -95,7 +107,7 @@
         background-color: transparent;
       }
 
-      #custom-startmenu, #workspaces, #tray, #window, #wireplumber, #language, #battery, #clock, #custom-notification, tooltip {
+      #custom-startmenu, #workspaces, #tray, #window, #wireplumber, #language, #battery, #network, #clock, #custom-notification, tooltip, #tray menu {
         background-color: #16191C;
         border-radius: 14px;
         padding: 4px 12px;
