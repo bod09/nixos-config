@@ -40,9 +40,6 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          # Passes Special Args down to home-manager modules
-          home-manager.extraSpecialArgs = { theme = ./theme; };
-
           # home.nix file used for user "bod"
           home-manager.users.bod = {
             imports = [
