@@ -22,7 +22,6 @@
     vesktop
     protonplus
     vscodium
-    networkmanagerapplet
   ];
 
   # Programs
