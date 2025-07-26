@@ -19,10 +19,11 @@
     pavucontrol
     nerd-fonts.jetbrains-mono
     nwg-look
-    swaynotificationcenter
     vesktop
     protonplus
     vscodium
+    gimp3
+    grimblast
   ];
 
   # Programs
@@ -49,6 +50,10 @@
       "--disable-features=NativeBraveWallet"
       "--disable-features=BraveAiChat"
     ];
+  };
+  services.swaync = {
+    enable = true;
+
   };
 
   #catppuccin
