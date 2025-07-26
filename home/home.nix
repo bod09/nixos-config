@@ -9,6 +9,7 @@
   imports = [
     ./modules/waybar.nix
     ./modules/hyprpaper.nix
+    ./modules/hyprland.nix
   ];
 
   # Packages that should be installed to the user profile.
@@ -68,8 +69,9 @@
     size = 16;
   };
 
- # Hyprland fixing systemd startup
-  wayland.windowManager.hyprland.systemd.enable = false;
+  wayland.windowManager.hyprland = {
+    
+  };
 
   gtk = {
     enable = true;
