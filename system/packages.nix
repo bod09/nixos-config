@@ -7,6 +7,5 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  wget
-    base16.schemes
   ];
 }
