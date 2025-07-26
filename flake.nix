@@ -7,6 +7,7 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +33,7 @@
 
       modules = [
         ./system/configuration.nix # <-- Main entry point
+        inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
         inputs.catppuccin.nixosModules.catppuccin
  #       inputs.stylix.nixosModules.stylix
         inputs.spicetify-nix.nixosModules.spicetify
