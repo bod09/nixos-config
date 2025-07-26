@@ -1,4 +1,4 @@
-{ config, pkgs, theme, ... }:
+{ config, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -25,9 +25,6 @@
   ];
 
   # Programs
-  programs.waybar = {
-    enable = true;
-  };
   programs.kitty.enable = true;
   programs.rofi = {
     enable = true;

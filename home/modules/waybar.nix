@@ -58,14 +58,13 @@
         };
         "network" = {
           format = "{ifname}";
-          format-wifi = " {essid}";
-          format-ethernet = "󰈀 {ipaddr}/{cidr}";
+          format-wifi = "";
+          format-ethernet = "󰈀";
           format-disconnected = "󰤮 Disconnected";
           tooltip-format = "󰊗 {ifname} via {gwaddr}";
           tooltip-format-wifi = " {essid} ({signalStrength}%)";
-          tooltip-format-ethernet = "󰈀 {ifname}";
+          tooltip-format-ethernet = "󰈀 {ifname}: {ipaddr}/{cidr}";
           tooltip-format-disconnected = "󰤮 Disconnected";
-          max-length = 50;
           on-click = "kitty -e nmtui";
         };
         "clock" = {
@@ -94,12 +93,13 @@
         };
       };
     };
-    style = ''
+     style = ''
       * {
         all: unset;
         font-family: "JetBrainsMono Nerd Font Propo", FontAwesome, Sans-serif;
         font-size: 16px;
         min-height: 0;
+        color: @text;
       }
 
       /* Make window module transparent when no windows present */
@@ -108,7 +108,7 @@
       }
 
       #custom-startmenu, #workspaces, #tray, #window, #wireplumber, #language, #battery, #network, #clock, #custom-notification, tooltip, #tray menu {
-        background-color: #16191C;
+        background-color: @base;
         border-radius: 14px;
         padding: 4px 12px;
       }
