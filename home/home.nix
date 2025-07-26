@@ -41,10 +41,11 @@
     enable = true;
     extensions = [
       { id = "nngceckbapebfimnlniiiahkandclblb"; } # Bitwarden
-      { id = "dphilobhebphkdjbpfohgikllaljmgbn"; } # Simplelogin
       { id = "oldceeleldhonbafppcapldpdifcinji"; } # LanuageTool
-      { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } # SponsorBlock
+      { id = "jplgfhpmjnbigmhklmmbgecoobifkmpa"; } # Proton VPN
       { id = "gebbhagfogifgggkldgodflihgfeippi"; } # Return YouTube Dislike
+      { id = "dphilobhebphkdjbpfohgikllaljmgbn"; } # Simplelogin
+      { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } # SponsorBlock
     ];
     commandLineArgs = [ #brave://flags
       "--disable-features=NativeBraveWallet"
