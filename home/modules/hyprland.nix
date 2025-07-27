@@ -25,7 +25,7 @@
       monitor=, preferred, auto, 1
       monitor= eDP-1, 2880x1920@120, auto, auto
       monitor= desc:LG Electronics 27GL850, 2560x1440, -2560x0, 1
-      monitor= desc:AOC AG274QS8R1B, 2560x1440, 0x0, 1
+      monitor= desc:AOC AG274QS8R1B, 2560x1440@165, 0x0, 1
             
       # Toggle laptop monitor on lid close/open
       bindl = , switch:on:Lid Switch, exec, hyprctl keyword monitor "eDP-1, disable"
