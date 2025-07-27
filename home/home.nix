@@ -74,10 +74,6 @@
     size = 16;
   };
 
-  wayland.windowManager.hyprland = {
-    
-  };
-
   gtk = {
     enable = true;
 
