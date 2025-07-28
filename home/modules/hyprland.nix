@@ -58,7 +58,7 @@
       # exec-once = nm-applet &
       exec-once = waybar & hyprpaper & brave
       # Listen for changes on your primary clipboard and write them to the history.
-      exec-once = wl-paste --watch cliphist store
+      exec-once = wl-paste --watch cliphist store --max-items 100
       
       
       #############################
@@ -249,6 +249,7 @@
       bind = $mainMod, F, togglefloating,
       bind = $mainMod, SPACE, exec, $menu
       bind = $mainMod, V, exec, rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons
+      bind = $mainMod SHIFT, V, exec, cliphist list | rofi -dmenu -p "Delete from clipboard" | cliphist delete
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
       
