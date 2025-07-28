@@ -322,6 +322,9 @@
       
       # Example windowrule
       # windowrule = float,class:^(kitty)$,title:^(kitty)$
+
+      # Blurs waybar
+      layerrule = blur,waybar
       
       # Ignore maximize requests from apps. You'll probably like this.
       windowrule = suppressevent maximize, class:.*

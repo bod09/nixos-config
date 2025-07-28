@@ -102,6 +102,11 @@
         color: @text;
       }
 
+      window#waybar {
+        border-radius: 16px;
+      	background: rgba(24, 24, 37, 0.75);
+      }
+
       /* Make window module transparent when no windows present */
       window#waybar.empty #window {
         background-color: transparent;
@@ -111,6 +116,7 @@
         background-color: @base;
         border-radius: 14px;
         padding: 4px 12px;
+        opacity: 1;
       }
       #workspaces button {
         padding: 0 8px;
