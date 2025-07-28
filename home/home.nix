@@ -24,6 +24,8 @@
     vscodium
     gimp3
     grimblast
+    wl-clipboard
+    cliphist
   ];
 
   # Programs

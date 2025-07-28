@@ -57,6 +57,8 @@
       # exec-once = $terminal
       # exec-once = nm-applet &
       exec-once = waybar & hyprpaper & brave
+      # Listen for changes on your primary clipboard and write them to the history.
+      exec-once = wl-paste --watch cliphist store
       
       
       #############################
@@ -100,8 +102,8 @@
           border_size = 2
       
           # https://wiki.hypr.land/Configuring/Variables/#variable-types for info about colors
-          col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
-          col.inactive_border = rgba(595959aa)
+          col.active_border = $mauve
+          col.inactive_border = $surface0
       
           # Set to true enable resizing windows by clicking and dragging on borders and gaps
           resize_on_border = false
@@ -239,12 +241,14 @@
       $mainMod = SUPER # Sets "Windows" key as main modifier
       
       # Example binds, see https://wiki.hypr.land/Configuring/Binds/ for more
-      bind = $mainMod, Q, exec, $terminal
-      bind = $mainMod, C, killactive,
+      bind = CTRL ALT, T, exec, $terminal
+      bind = $mainMod, Q, killactive,
+      bind = $mainMod SHIFT, Q, exec, kill -9 $(hyprctl activewindow | grep 'pid:' | awk '{print $2}')
       bind = $mainMod, M, exit,
       bind = $mainMod, E, exec, $fileManager
-      bind = $mainMod, V, togglefloating,
-      bind = $mainMod, R, exec, $menu
+      bind = $mainMod, F, togglefloating,
+      bind = $mainMod, SPACE, exec, $menu
+      bind = $mainMod, V, exec, rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
       
