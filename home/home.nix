@@ -26,6 +26,7 @@
     grimblast
     wl-clipboard
     cliphist
+    protonvpn-gui
   ];
 
   # Programs

@@ -58,6 +58,8 @@ in
     packages = with pkgs; [];
   };
 
+  powerManagement.enable = true;
+
   # Enable automatic login for the user.
   services.getty.autologinUser = "bod";
 
@@ -95,6 +97,7 @@ in
     pulse.enable = true;
     jack.enable = true;
   };
+  programs.noisetorch.enable = true;
 
   # Spotify
   programs.spicetify = {
