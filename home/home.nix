@@ -40,15 +40,15 @@
   programs.lazygit.enable = true;
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium; #'JetBrainsMono Nerd Font Propo',
+    package = pkgs.vscodium;
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         catppuccin.catppuccin-vsc
         jnoortheen.nix-ide
       ];
       userSettings = {
-      "editor.fontFamily" = "JetBrainsMono Nerd Font Mono"; # Or your desired font
-      "editor.fontLigatures" = true; # 'Droid Sans Mono', 'monospace', monospace
+      "editor.fontFamily" = "JetBrainsMono Nerd Font Mono";
+      "editor.fontLigatures" = true;
       "workbench.colorTheme" = "Catppuccin Mocha";
       };
     };
