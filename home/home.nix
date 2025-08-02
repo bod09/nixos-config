@@ -21,7 +21,6 @@
     nwg-look
     vesktop
     protonplus
-    vscodium
     gimp3
     grimblast
     wl-clipboard
@@ -39,6 +38,21 @@
     userName = "bod09";
   };
   programs.lazygit.enable = true;
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium; #'JetBrainsMono Nerd Font Propo',
+    profiles.default = {
+      extensions = with pkgs.vscode-extensions; [
+        catppuccin.catppuccin-vsc
+        jnoortheen.nix-ide
+      ];
+      userSettings = {
+      "editor.fontFamily" = "JetBrainsMono Nerd Font Mono"; # Or your desired font
+      "editor.fontLigatures" = true; # 'Droid Sans Mono', 'monospace', monospace
+      "workbench.colorTheme" = "Catppuccin Mocha";
+      };
+    };
+  };
   programs.brave = {
     enable = true;
     extensions = [
@@ -56,7 +70,6 @@
   };
   services.swaync = {
     enable = true;
-
   };
 
   #catppuccin
