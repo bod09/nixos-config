@@ -119,14 +119,11 @@ in
    nix.gc = {
      automatic = true;
      dates = "weekly";
-     options = "--delete-older-than 30d";
+     options = "--delete-older-than 14d";
    };
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];  
-
-  # Stylix
-  # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
