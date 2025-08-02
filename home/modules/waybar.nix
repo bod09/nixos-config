@@ -53,8 +53,17 @@
           on-click = "";
         };
         "battery" = {
+          states = {
+            warning = 30;
+            critical = 15;
+          };
           format = "{icon} {capacity}%";
-          format-icons = ["" "" "" "" ""];
+          format-charging = "{icon} {capacity}%";
+          format-plugged = "";
+          format-icons = {
+            "discharging" = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+            "charging" = ["󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅"];
+          };
         };
         "network" = {
           format = "{ifname}";
@@ -120,6 +129,18 @@
       }
       #workspaces button {
         padding: 0 8px;
+      }
+
+      /*
+       * ---- Battery ----
+       */
+      
+      #battery.warning {
+          color: @peach;
+      }
+      
+      #battery.critical {
+          color: @red;
       }
     '';
   };
