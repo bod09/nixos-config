@@ -11,7 +11,7 @@
         margin-left = 4;
         margin-right = 4;
         margin-bottom = 0;
-        modules-left = ["custom/startmenu" "hyprland/workspaces" "tray"];
+        modules-left = ["custom/startmenu" "hyprland/workspaces" "tray" "mpris"];
         modules-center = ["hyprland/window"];
         modules-right = ["wireplumber" "hyprland/language" "battery" "network" "clock" "custom/notification"];
 
@@ -36,6 +36,19 @@
             active = "";
             default = "";
           };
+        };
+        "mpris" = {
+          interval = 1;
+        	format = "{player_icon} {title} <span size='small'>[{position}/{length}]</span>";
+        	format-paused = "{status_icon} {title} <span size='small'>{position}/{length}</span>";
+        	player-icons = {
+        		"default" = "▶";
+        		"plex" = "󰚺";
+            "spotify" = "<span color='#1DB954'></span>";
+        	};
+        	status-icons = {
+        		"paused" = "⏸";
+        	};
         };
         "hyprland/window" = {
           format = "{class}";
@@ -121,7 +134,7 @@
         background-color: transparent;
       }
 
-      #custom-startmenu, #workspaces, #tray, #window, #wireplumber, #language, #battery, #network, #clock, #custom-notification, tooltip, #tray menu {
+      #custom-startmenu, #workspaces, #tray, #mpris, #window, #wireplumber, #language, #battery, #network, #clock, #custom-notification, tooltip, #tray menu {
         background-color: @base;
         border-radius: 14px;
         padding: 4px 12px;
