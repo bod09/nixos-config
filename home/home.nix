@@ -53,6 +53,7 @@
       "editor.fontFamily" = "JetBrainsMono Nerd Font Mono";
       "editor.fontLigatures" = true;
       "workbench.colorTheme" = "Catppuccin Mocha";
+      "git.confirmSync": false
       };
     };
   };
