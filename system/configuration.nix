@@ -9,5 +9,6 @@
     [ 
       ./hardware-configuration.nix # Include the results of the hardware scan.
       ./options.nix
+      ./modules/brightness.nix
     ];
 }
