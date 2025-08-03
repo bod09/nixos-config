@@ -16,10 +16,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
- #   stylix = {
- #     url = "github:danth/stylix";
- #     inputs.nixpkgs.follows = "nixpkgs";
- #   };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -35,7 +31,6 @@
         ./system/configuration.nix # <-- Main entry point
         inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
         inputs.catppuccin.nixosModules.catppuccin
- #       inputs.stylix.nixosModules.stylix
         inputs.spicetify-nix.nixosModules.spicetify
         inputs.home-manager.nixosModules.home-manager
         {
