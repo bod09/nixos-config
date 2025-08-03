@@ -14,6 +14,11 @@ let
        new_brightness=$((current_brightness + step))
      else
        new_brightness=$((current_brightness - step))
+
+       # If the new value is zero or less, set it to 1 to keep the screen on.
+       if [ "$new_brightness" -le 0 ]; then
+         new_brightness=1
+       fi
      fi
  
      echo "$new_brightness" > "$backlight_dir/brightness"
