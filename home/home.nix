@@ -40,6 +40,7 @@
     userName = "bod09";
   };
   programs.lazygit.enable = true;
+  programs.yazi.enable = true;
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
