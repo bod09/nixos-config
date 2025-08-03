@@ -14,18 +14,19 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    neovim
-    fastfetch
-    pavucontrol
-    nerd-fonts.jetbrains-mono
-    nwg-look
-    vesktop
-    protonplus
-    gimp3
-    grimblast
-    wl-clipboard
-    cliphist
-    protonvpn-gui
+    neovim                    # Text editor
+    fastfetch                 # System information 
+    pavucontrol               # Audio mixer
+    playerctl                 # Media controller
+    nerd-fonts.jetbrains-mono # Font
+    nwg-look                  # GTK3 settings editor
+    vesktop                   # Custom Discord App
+    protonplus                # Compatibility tools manager
+    gimp3                     # Image Manipulation
+    grimblast                 # Screenshots
+    wl-clipboard              # Command-line copy/paste (needed for cliphist)
+    cliphist                  # Clipboard manager
+    protonvpn-gui             # VPN client
   ];
 
   # Programs
