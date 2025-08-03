@@ -16,6 +16,12 @@ in
   # Framework Laptop 13 - Firmware updates (fwupdmgr update).
   services.fwupd.enable = true;
 
+  # Graphics acceleration
+  hardware.graphics = {
+  enable = true;
+  enable32Bit = true;
+};
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -80,16 +86,16 @@ in
   programs.bash.shellAliases = {
     nrs = "sudo nixos-rebuild switch --flake /home/bod/nixos-config";
   };
-
+  
   # Steam
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Opens ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Networ>
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   }; 
 
- # Pipewire
+  # Pipewire
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
