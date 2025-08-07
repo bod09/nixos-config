@@ -85,6 +85,7 @@
     # waybar.enable = true;
     # rofi.enable = true;
     # kitty.enable = true;
+    gtk.icon.enable = false;
   };
 
   # Hyprland fixing theme issues
