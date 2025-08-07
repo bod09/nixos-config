@@ -28,6 +28,7 @@
     cliphist                  # Clipboard manager
     protonvpn-gui             # VPN client
     plex-desktop              # Media streaming client
+    vlc                       # Media player
   ];
 
   # Programs
