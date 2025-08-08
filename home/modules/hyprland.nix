@@ -43,7 +43,7 @@
       
       # Set programs that you use
       $terminal = kitty
-      $fileManager = dolphin
+      $fileManager = yazi
       $menu = rofi -show drun
       
       

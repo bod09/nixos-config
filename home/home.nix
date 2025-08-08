@@ -28,7 +28,7 @@
     cliphist                  # Clipboard manager
     protonvpn-gui             # VPN client
     plex-desktop              # Media streaming client
-    vlc                       # Media player
+    vlc                       # Media 
   ];
 
   # Programs
@@ -41,7 +41,14 @@
     userName = "bod09";
   };
   programs.lazygit.enable = true;
-  programs.yazi.enable = true;
+  programs.yazi = {
+    enable = true;
+    settings = {
+      mgr = {
+        show_hidden = true;
+      };
+    };
+  };
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
@@ -75,6 +82,31 @@
   };
   services.swaync = {
     enable = true;
+  };
+  # Image Viewer
+  programs.swayimg = {
+    enable = true;
+    settings = {
+      viewer = {
+        window = "#000000";
+        scale = "fit";
+      };
+    };
+  };
+  #Default applications
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "x-scheme-handler/discord" = "vesktop.desktop";
+      "application/pdf" = "brave-browser.desktop";
+      "image/jpeg"      = "swayimg.desktop";
+      "image/png"       = "swayimg.desktop";
+      "image/gif"       = "swayimg.desktop";
+      "image/webp"      = "swayimg.desktop";
+      "image/svg+xml"   = "swayimg.desktop";
+      "image/avif"      = "swayimg.desktop";
+      "image/bmp"       = "swayimg.desktop";
+    };
   };
   programs.btop.enable = true;
 
