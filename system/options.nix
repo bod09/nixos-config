@@ -65,7 +65,7 @@ in
   };
 
   powerManagement.enable = true;
-  services.logind.lidSwitch = "suspend-then-hibernate";
+  services.logind.lidSwitch = "hibernate";
 
   # Enable automatic login for the user.
   services.getty.autologinUser = "bod";
