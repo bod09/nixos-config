@@ -10,6 +10,7 @@
     ./modules/waybar.nix
     ./modules/hyprpaper.nix
     ./modules/hyprland.nix
+    ./modules/swayosd.nix
   ];
 
   # Packages that should be installed to the user profile.
@@ -28,7 +29,7 @@
     cliphist                  # Clipboard manager
     protonvpn-gui             # VPN client
     plex-desktop              # Media streaming client
-    vlc                       # Media 
+    vlc                       # Media
   ];
 
   # Programs
