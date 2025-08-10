@@ -4,54 +4,43 @@
   services.swayosd = {
     enable = true;
     stylePath = pkgs.writeText "style.css" ''
-      window {
-        padding: 0 1em;
-        border: 10em;
-        border-radius: 10em;
-        background-color: #ffffff;
-        opacity: 0.7;
-      }
-      #container {
-        margin: 1em;
-      }
-
-      image {
-        color: #ffffff;
-        opacity: 0.9;
-      }
-      image:disabled {
-        color: #ffffff;
-        opacity: 0.8;
-      }
-      label {
-        color: #ffffff;
-        opacity: 1;
-      }
-
-      progress {
-        min-height: inherit;
-        border-radius: inherit;
+      window#osd {
+        border-radius: 999px;
         border: none;
-        background-color: #ffffff;
-        opacity: 0.9;
-      }
-      progressbar {
-        min-height: 0.5em;
-        border-radius: 100em;
-        background-color: transparent;
-        border: none;
-        opacity: 0.9;
-      }
-      progressbar:disabled {
-        opacity: 0.5;
-      }
-
-      trough {
-        min-height: inherit;
-        border-radius: inherit;
-        border: none;
-        background-color: #ffffff;
-        opacity: 1;
+        background: #{"alpha(@theme_bg_color, 0.8)"};
+      
+        #container {
+          margin: 16px;
+        }
+      
+        image,
+        label {
+          color: #{"@theme_fg_color"};
+        }
+      
+        progressbar:disabled,
+        image:disabled {
+          opacity: 0.5;
+        }
+      
+        progressbar {
+          min-height: 6px;
+          border-radius: 999px;
+          background: transparent;
+          border: none;
+        }
+        trough {
+          min-height: inherit;
+          border-radius: inherit;
+          border: none;
+          background: #{"alpha(@theme_fg_color, 0.5)"};
+        }
+        progress {
+          min-height: inherit;
+          border-radius: inherit;
+          border: none;
+          background: #{"@theme_fg_color"};
+        }
       }
     '';
   };

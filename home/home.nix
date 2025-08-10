@@ -10,7 +10,7 @@
     ./modules/waybar.nix
     ./modules/hyprpaper.nix
     ./modules/hyprland.nix
-    ./modules/swayosd.nix
+    # ./modules/swayosd.nix
   ];
 
   # Packages that should be installed to the user profile.
@@ -30,6 +30,7 @@
     protonvpn-gui             # VPN client
     plex-desktop              # Media streaming client
     vlc                       # Media
+    wob                       # On Screen Display
   ];
 
   # Programs
