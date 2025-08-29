@@ -77,6 +77,7 @@
     extensions = [
       { id = "nngceckbapebfimnlniiiahkandclblb"; } # Bitwarden
       { id = "oldceeleldhonbafppcapldpdifcinji"; } # LanuageTool
+      { id = "neebplgakaahbhdphmkckjjcegoiijjo"; } # Keepa
       { id = "jplgfhpmjnbigmhklmmbgecoobifkmpa"; } # Proton VPN
       { id = "gebbhagfogifgggkldgodflihgfeippi"; } # Return YouTube Dislike
       { id = "dphilobhebphkdjbpfohgikllaljmgbn"; } # Simplelogin
