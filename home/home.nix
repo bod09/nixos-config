@@ -26,7 +26,6 @@
     gimp3                     # Image Manipulation
     grimblast                 # Screenshots
     wl-clipboard              # Command-line copy/paste (needed for cliphist)
-    cliphist                  # Clipboard manager
     protonvpn-gui             # VPN client
     plex-desktop              # Media streaming client
     vlc                       # Media
@@ -49,6 +48,13 @@
         show_hidden = true;
       };
     };
+  };
+  services.cliphist = {       # Clipboard manager
+    enable = true;
+    extraOptions = [
+      "-max-items"
+      "100"
+    ];
   };
   programs.vscode = {
     enable = true;
