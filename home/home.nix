@@ -30,7 +30,6 @@
     protonvpn-gui             # VPN client
     plex-desktop              # Media streaming client
     vlc                       # Media
-    wob                       # On Screen Display
   ];
 
   # Programs
