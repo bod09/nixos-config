@@ -38,7 +38,7 @@
   };
   programs.git = {
     enable = true;
-    userName = "bod09";
+    settings.user.name = "bod09";
   };
   programs.lazygit.enable = true;
   programs.yazi = {
