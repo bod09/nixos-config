@@ -29,6 +29,7 @@
     protonvpn-gui             # VPN client
     plex-desktop              # Media streaming client
     vlc                       # Media
+    code-cursor               # Cursor
   ];
 
   # Programs
